@@ -1,0 +1,16 @@
+language: r
+dist: xenial
+before_install:
+  - cd book
+cache:
+  packages: true
+script:
+  - Rscript -e 'bookdown::render_book("index.Rmd")'
+deploy:
+  provider: pages
+  skip_cleanup: true
+  token: $GITHUB_TOKEN
+  keep_history: false
+  local_dir: _book_output
+  on:
+    branch: master

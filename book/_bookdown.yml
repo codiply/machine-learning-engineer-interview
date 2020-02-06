@@ -1,0 +1,7 @@
+book_filename: "book"
+repo: https://github.com/codiply/machine-learning-engineer-interview
+output_dir: "../_book_output"
+language:
+  ui:
+    chapter_name: "Chapter "
+    edit: "Edit"

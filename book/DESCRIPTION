@@ -1,0 +1,10 @@
+Package: MachineLearningEngineerInterview
+Title: Machine Learning Engineer Interview
+Version: 0.0.1
+Authors@R: person("Panagiotis", "Katsaroumpas", email = "codiply@gmail.com", role = c("aut", "cre"))
+License: bsd-2-clause
+Description: Machine Learning Engineer Interview Questions and Answers
+Depends: R (>= 3.3.0)
+URL: https://github.com/codiply/machine-learning-engineer-interview
+Imports:
+    bookdown
