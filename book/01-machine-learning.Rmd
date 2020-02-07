@@ -1,6 +1,6 @@
 # Machine Learning
 
-#### How can you reduce overfitting? {-}
+### How can you reduce overfitting? {-}
 
 - Collect more data to train with
 - Use data augmentation to generate more train data
@@ -11,3 +11,35 @@
 - Use early stopping during training
 - Filter out irrelevant or redundant features using a feature selection technique
 - Use Ensembling to combine predictions from multiple models
+
+### Define accuracy, precision and recall {-}
+
+#### Accuracy {-}
+
+$$
+  \text{Accuracy} = \frac{TP + TN}{TP + FP + FN + TN}
+$$
+
+```{r accuracy-definition-diagram, echo=FALSE, fig.align="center", out.width = "80%"}
+knitr::include_graphics("images/accuracy-definition-diagram.svg")
+```
+
+#### Precision {-}
+
+$$
+  \text{Precision} = \frac{TP}{TP + FP}
+$$
+
+```{r precision-definition-diagram, echo=FALSE, fig.align="center", out.width = "80%"}
+knitr::include_graphics("images/precision-definition-diagram.svg")
+```
+
+#### Recall {-}
+
+$$
+  \text{Recall} = \frac{TP}{TP + FN}
+$$
+
+```{r recall-definition-diagram, echo=FALSE, fig.align="center", out.width = "80%"}
+knitr::include_graphics("images/recall-definition-diagram.svg")
+```
