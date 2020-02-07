@@ -12,7 +12,7 @@
 - Filter out irrelevant or redundant features using a feature selection technique
 - Use Ensembling to combine predictions from multiple models
 
-### Define accuracy, precision and recall {-}
+### Define accuracy, precision, recall, specificity {-}
 
 #### Accuracy {-}
 
@@ -34,7 +34,7 @@ $$
 knitr::include_graphics("images/precision-definition-diagram.svg")
 ```
 
-#### Recall {-}
+#### Recall (Sensitivity) {-}
 
 $$
   \text{Recall} = \frac{TP}{TP + FN}
@@ -42,4 +42,14 @@ $$
 
 ```{r recall-definition-diagram, echo=FALSE, fig.align="center", out.width = "80%"}
 knitr::include_graphics("images/recall-definition-diagram.svg")
+```
+
+#### Specificity {-}
+
+$$
+  \text{Specificity} = \frac{TN}{TN + FP}
+$$
+
+```{r specificity-definition-diagram, echo=FALSE, fig.align="center", out.width = "80%"}
+knitr::include_graphics("images/specificity-definition-diagram.svg")
 ```
