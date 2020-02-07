@@ -1,0 +1,13 @@
+# Machine Learning
+
+#### How can you reduce overfitting? {-}
+
+- Collect more data to train with
+- Use data augmentation to generate more train data
+- Use cross-validation to better estimate your error during model selection
+- Reduce the complexity of the model by reducing the number of parameters/layers
+- Use a different model/architecture that generalises better
+- Use a regularisation technique (L1/L2 regularisation, dropout)
+- Use early stopping during training
+- Filter out irrelevant or redundant features using a feature selection technique
+- Use Ensembling to combine predictions from multiple models

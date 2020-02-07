@@ -2,11 +2,15 @@
 title: "Machine Learning Engineer Interview"
 author: "Panagiotis Katsaroumpas"
 date: "`r gsub(' 0', ' ', format(Sys.Date(), '%B %d, %Y'))`"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 github-repo: codiply/machine-learning-engineer-interview
 documentclass: book
 site: bookdown::bookdown_site
 description: Machine Learning Engineer Interview Questions and Answers
 ---
 
-# Welcome {-}
+# Introduction {-}
+
+These are my personal notes for interview questions and answers for the role of machine learning engineer.
