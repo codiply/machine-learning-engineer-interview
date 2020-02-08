@@ -53,3 +53,16 @@ $$
 ```{r specificity-definition-diagram, echo=FALSE, fig.align="center", out.width = "80%"}
 knitr::include_graphics("images/specificity-definition-diagram.svg")
 ```
+
+### What are training, validation (development) and test sets? {-}
+
+**Train (training) set** is a set of examples on which the model is trained.
+
+**Validation set** or **dev (development) set** is a set of examples used for model selection and hyperparameter tuning. This is independent of the training set but it should come from the same distribution. The examples in this set are different from the ones seen by the models during training. Different trained models are all evaluated on the validation/dev set and the best performing model is chosen.
+
+**Test set** is a set of examples that are used to assess the performance of the very final model on examples that have not used before either during training or model selection/hyperparameter tuning.
+
+### What is the right split for train/dev/test sets? {-}
+
+- For smaller datasets of up to 10K examples, the split is classically **60% (train) - 20% (dev) - 20% (test)**.
+- For big datasets that typically contain millions of examples (used in training complex deep learning models), one can afford to do a split of **98% (train) - 1% (dev) - 1% (test)**. This maximises the amount of data needed for training the complex models, while still setting asside at least 10K of examples for each of the dev and test sets. 
