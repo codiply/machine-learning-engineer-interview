@@ -4,4 +4,19 @@
 
 ## Probability Theory and Statistics
 
+### State Bayes law {-}
+
+Bayes law/theorem/rule states that
+
+$$
+  P(A|B) = \frac{P(B|A) \: P(A)}{P(B)},
+$$
+where $P(X|Y)$ is the conditional probability of event X occuring given that Y is true. P(A) and P(B) are called marginal probabilities.
+
+The law can be easily memorised and derived from the symmetric equation
+
+$$
+  P(A | B) \: P(B) = P(B | A)\: P(A).
+$$
+
 ## Multivariate Calculus
