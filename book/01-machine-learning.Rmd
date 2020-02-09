@@ -66,3 +66,12 @@ knitr::include_graphics("images/specificity-definition-diagram.svg")
 
 - For smaller datasets of up to 10K examples, the split is classically **60% (train) - 20% (dev) - 20% (test)**.
 - For big datasets that typically contain millions of examples (used in training complex deep learning models), one can afford to do a split of **98% (train) - 1% (dev) - 1% (test)**. This maximises the amount of data needed for training the complex models, while still setting asside at least 10K of examples for each of the dev and test sets. 
+
+### Define loss, cost and objective functions {-}
+
+- Loss function is a function defined on a single example producing a single penalty term. It is a measure of error that tells us how good the prediction is compared to the actual label of the example.
+
+- Cost function is evaluated on all the examples in a specific set (e.g. the train set for train error, the test set for test error, a mini-batch in mini-batch gradient descent), and it is typically a sum (or average) of the loss function over all examples. It might include additional penalty terms like regularisation terms. The ultimate goal of training a model is to minimise the cost function.
+
+- Objective function is a function that measures the quality of a solution to a problem. One searches for optimal solutions to the problem by optimising the objective function, i.e. finding the parameters of the solution/model that minimise or maximise (depending on the problem) the objective function. The cost function is an example of an objective function.
+
