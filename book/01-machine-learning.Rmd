@@ -75,3 +75,17 @@ knitr::include_graphics("images/specificity-definition-diagram.svg")
 
 - Objective function is a function that measures the quality of a solution to a problem. One searches for optimal solutions to the problem by optimising the objective function, i.e. finding the parameters of the solution/model that minimise or maximise (depending on the problem) the objective function. The cost function is an example of an objective function.
 
+### Place bayes/human error, training error and dev error on this graph. Define avoidable bias and variance on the same graph. {-}
+
+```{r avoidable-bias-variance-definition-empty-graph, echo=FALSE, fig.align="center", out.width = "70%"}
+knitr::include_graphics("images/avoidable-bias-variance-definition-empty-graph.svg")
+```
+
+Due to some degree of overfitting the train error is usually lower than the dev error. Assuming that for the specific domain the human error is a good proxy for the Bayes error, then this will be the lowest error possible and therefore the train error would be higher than that.
+
+
+```{r avoidable-bias-variance-definition, echo=FALSE, fig.align="center", out.width = "70%"}
+knitr::include_graphics("images/avoidable-bias-variance-definition.svg")
+```
+
+Avoidable bias is the difference between the human error and the train error. Variance is the difference between the train error and the dev error.
