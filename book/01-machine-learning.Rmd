@@ -89,3 +89,25 @@ knitr::include_graphics("images/avoidable-bias-variance-definition.svg")
 ```
 
 Avoidable bias is the difference between the human error and the train error. Variance is the difference between the train error and the dev error.
+
+### Will you focus on reducing bias or variance in a neural network in the following cases and how?  {-}
+
+|               |   Case 1   |  Case 2 |
+| ------------- |:----------:|:-------:|
+| Human error   |     2%     |   9.5%  |
+| Train error   |    10%     |    10%  |
+| Dev error     |    12%     |    12%  |
+
+In case 1, the focus should be on reducing the bias. This can be achieved by
+
+- training the network for longer,
+- using a better optimisation algorithm (for example RMSprop or Adam),
+- using a bigger network (more nodes per layer, more layers),
+- changing to a different architecture that is better suited to the task.
+
+In case 2, the focus should be on reducing the variance. This can be achieved by
+
+- training with more data (either by collecting them, or by using data augmentation),
+- using a regularisation techinque (for example dropout layers),
+- changing to a different architecture that is better suited to the task.
+
