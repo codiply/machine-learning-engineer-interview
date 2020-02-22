@@ -34,7 +34,7 @@ $$
 knitr::include_graphics("images/precision-definition-diagram.svg")
 ```
 
-#### Recall (Sensitivity) {-}
+#### Recall (sensitivity, true positive rate) {-}
 
 $$
   \text{Recall} = \frac{TP}{TP + FN}
@@ -44,7 +44,7 @@ $$
 knitr::include_graphics("images/recall-definition-diagram.svg")
 ```
 
-#### Specificity {-}
+#### Specificity (selectivitiy, true negative rate) {-}
 
 $$
   \text{Specificity} = \frac{TN}{TN + FP}
