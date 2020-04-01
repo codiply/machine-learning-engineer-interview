@@ -2,7 +2,7 @@
 
 ## Kafka
 
-### What ordering guarantee Kafka provides and how can it be used? {-}
+### What ordering guarantee does Kafka provide and how can it be used? {-}
 
 Kafka provides total order over records within a partition, while there are no guarantees for records spread accross different partitions. This guarantee is sufficient in many applications and can be leveraged by partitioning the records by the right key. For example, if records are partitioned by the user id, then ordering is preserved for all records for a specific user. As each partition is consumed by a single consumer, this guarantees that records for a specific user will be processed in the same order as they arrived.
 
