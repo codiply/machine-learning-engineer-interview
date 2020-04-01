@@ -2,6 +2,58 @@
 
 ## Scala
 
+### What implementations are possible for the following generic function?
+
+```{scala, eval=FALSE}
+object GenericFunction {
+  def myFunction[T](input: T): T = ???
+}
+```
+
+The only possible value of type T we can return is the input itself. So this is the identity function
+
+```{scala, eval=FALSE}
+object GenericFunction {
+  def myFunction[T](input: T): T = identity
+}
+```
+
+### A Monad is automatically a Functor. Given the implementation for monad, implement the functor interface.
+
+This is the definition for the monad
+
+```{scala, eval=FALSE}
+trait Monad[F[_]] {
+  def pure[A](value: A): F[A]
+  def flatMap[A, B](value: F[A])(f: A => F[B]): F[B]
+}
+```
+
+and the definition for the functor
+
+```{scala, eval=FALSE}
+trait Functor[F[_]] {
+  def map[A, B](value: F[A])(f: A => B): F[B]
+}
+```
+
+Implement the `map` function given the functions `pure` and `flatMap`.
+
+```{scala, eval=FALSE}
+trait Monad[F[_]] {
+  def pure[A](value: A): F[A]
+  def flatMap[A, B](value: F[A])(f: A => F[B]): F[B]
+
+  def map[A, B](value: F[A])(f: A => B): F[B] = ???
+}
+```
+
+The solution is the following
+
+```{scala, eval=FALSE}
+def map[A, B](value: F[A])(f: A => B): F[B] = flatMap(value)(x => pure(f(x)))
+```
+
 ## Python
 
 ## SQL
