@@ -64,6 +64,30 @@ $$
 knitr::include_graphics("images/false-positive-rate-definition-diagram.svg")
 ```
 
+### Define F1 score {-}
+
+The F1 score is defined as
+
+$$
+  F_1 = 2 \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}}
+$$
+Alternative ways to memorise this formula
+
+$$
+  F_1 = \frac{2}{\frac{1}{\text{precision}} + \frac{1}{\text{recall}}}
+$$
+or
+
+$$
+  F_1 =  \frac{\text{precision} \cdot \text{recall}}{\frac{\text{precision} + \text{recall}}{2}}
+$$
+
+In terms of true/false positives/negatives it is defined as
+
+$$
+  F_1 =  \frac{TP}{TP + \frac{FP + FN}{2}}
+$$
+
 ### What are training, validation (development) and test sets? {-}
 
 **Train (training) set** is a set of examples on which the model is trained.
