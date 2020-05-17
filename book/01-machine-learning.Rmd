@@ -109,6 +109,14 @@ $$
 
 - Objective function is a function that measures the quality of a solution to a problem. One searches for optimal solutions to the problem by optimising the objective function, i.e. finding the parameters of the solution/model that minimise or maximise (depending on the problem) the objective function. The cost function is an example of an objective function.
 
+### How batch, minibatch and stochastic gradient descent differ? {-}
+
+For all algorithms, at each step the parameters of the model are updated based on the gradient of the cost function with respect to the parameters.
+
+- In (batch) gradient descent, the gradient used in each step is the gradient of the whole cost function which contains the loss function for all examples. Therefore, we need to make a pass (called training epoch) over the whole dataset before each step is taken.
+- In stochastic gradient descent, the gradient used in each step is the gradient for a randomly chosen example. The examples are shuffled and then iterated over. Several passes are made over the examples until the algorithm converges to a minimum of the cost function.
+- In minibatch gradient descent, the data are split into mini-batches of size $n$. The gradient at each step is calculated for a mini-batch of n examples. All examples are iterated over in mini-batches. For $n=1$ we get stochastic gradient descent. For $n$ equal to the total number of examples we get batch gradient descent.
+
 ### Place bayes/human error, training error and dev error on this graph. Define avoidable bias and variance on the same graph. {-}
 
 ```{r avoidable-bias-variance-definition-empty-graph, echo=FALSE, fig.align="center", out.width = "70%"}
