@@ -153,3 +153,28 @@ In case 2, the focus should be on reducing the variance. This can be achieved by
 - using a regularisation techinque (for example dropout layers),
 - changing to a different architecture that is better suited to the task.
 
+### What is vectorization of an algorithm and what are its benefits {-}
+
+Vectorization is the process of removing explicit _for loops_ in order to make an algorithm run more efficiently. This is achieved by
+
+- grouping relevant variables and representing them with a single matrix
+- rewriting the steps of the algorithm as expressions of these matrices with matrix operations among them
+- implementing these steps/expressions using a library that has vectorized implementations for the matrix operations (for example NumPy).
+
+For example, in the formula below, we have a set of weights $w_i$, features $x_i$ and a bias $b$, and in order to calculate the output $z$ we could do an explicit for loop in code for each value of $i$
+
+$$
+  z = \sum_{i=1}^{n} w_i x_i + b.
+$$
+
+In a vectorized version of this calculation, we group the weights in a column vector $W$ and the features in a column vector $X$ and the sum term can be replaced by the matrix multiplication of the transpose of the weights $W^T$ with the $X$
+
+$$
+  z = W^T X + b.
+$$
+
+Taking this to the next level, we can group the features of all examples into a single matrix where each column contains the features of a single example. With similar matrix multiplication as above we can calculate the output for all examples in the dataset in a single statement (as a column vector $Z$), avoiding a double nested loop. In some cases for loops might be unavoidable, if one step needs the output of another step, for example as we progress from layer to layer in a deep neural network, or from epoch to epoch.
+
+Vectorization can be utilised in various parts of an algorithm. For example, the calculation of the activations during a forward pass in a deep neural network, calculation of the cost function over the current batch of examples, and the calculation of derivatives during a backward pass.
+
+Vectorized code runs much faster because it leverages [SIMD](https://en.wikipedia.org/wiki/SIMD) instructions to paralellise the execution of the code on CPUs and GPUs. This becomes especially critical for Big Data.
