@@ -178,3 +178,22 @@ Taking this to the next level, we can group the features of all examples into a 
 Vectorization can be utilised in various parts of an algorithm. For example, the calculation of the activations during a forward pass in a deep neural network, calculation of the cost function over the current batch of examples, and the calculation of derivatives during a backward pass.
 
 Vectorized code runs much faster because it leverages [SIMD](https://en.wikipedia.org/wiki/SIMD) instructions to paralellise the execution of the code on CPUs and GPUs. This becomes especially critical for Big Data.
+
+### What are the differences of image classification, object detection, semantic segmentation and instance segmentation? {-}
+
+All these are techniques in computer vision.
+
+- Image classification detects the presence or not of a specific class of an object in a whole picture.
+It doesn't tell us in which part of the picture or how many objects are present.
+- Object detection detects one or several objects in an image. It specifies the class of each object,
+and in addition, it tells us where it is found on the picture by placing a bounding box around it.
+- Semantic segmentation detects the object class of each individual pixel in an image. 
+It produces a mask where the label of each pixel gives us the class of the object it belongs too.
+This allow us to see boundaries between different types of objects, but it does not produce boundaries between
+objects of the same class. For example, it tells where parked cars stop and background trees start, but
+it doesn't give us boundaries between individual cars. 
+- Instance segmentation works at pixel level too similarly to semantic segmentation. In addition,
+it separates different instances of the same class. 
+This allow us to see boundaries between different instances of objects of the same class.
+For example, in the output mask pixels belonging to different cars will have different colours.For example, in the output mask pixels belonging to different cars will have different colours.
+
