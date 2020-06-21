@@ -197,3 +197,12 @@ it separates different instances of the same class.
 This allow us to see boundaries between different instances of objects of the same class.
 For example, in the output mask pixels belonging to different cars will have different colours.For example, in the output mask pixels belonging to different cars will have different colours.
 
+### What is the difference among normalizing, scaling and standardizing when performing feature engineering? {-}
+
+- Normalization acts at the sample (row) level. Each sample is rescaled differently. 
+The components of each sample are rescaled so that its norm equals to one. Normalisation is used in clustering for instance.
+- Scaling acts at the feature (column) level. It scales the feature in the same way for all samples, 
+given an algorithm that takes into account the values of the feature across all samples.
+Examples of scaling include MinMax scaling (scale to a given range), Mean/variance standardization (see below) and
+Robust scaling (scaling using statistics that are robust to outliers).
+- Standardization is a type of scaling where we remove the mean of the feature and scale it so that its variance becomes one.
