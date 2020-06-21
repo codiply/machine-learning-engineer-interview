@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Mathematics | Machine Learning Engineer Interview</title>
+  <meta name="description" content="Chapter 5 Mathematics | Machine Learning Engineer Interview Questions and Answers" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Mathematics | Machine Learning Engineer Interview" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 5 Mathematics | Machine Learning Engineer Interview Questions and Answers" />
+  <meta name="github-repo" content="codiply/machine-learning-engineer-interview" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Mathematics | Machine Learning Engineer Interview" />
+  
+  <meta name="twitter:description" content="Chapter 5 Mathematics | Machine Learning Engineer Interview Questions and Answers" />
+  
+
+<meta name="author" content="Panagiotis Katsaroumpas" />
+
+
+<meta name="date" content="2020-06-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="programming-languages.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Machine Learning Engineer Interview</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>1</b> Machine Learning</a><ul>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#how-can-you-reduce-overfitting"><i class="fa fa-check"></i>How can you reduce overfitting?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#define-accuracy-precision-recall-specificity-false-positive-rate"><i class="fa fa-check"></i>Define accuracy, precision, recall, specificity, false positive rate</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#define-f1-score"><i class="fa fa-check"></i>Define F1 score</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#what-are-training-validation-development-and-test-sets"><i class="fa fa-check"></i>What are training, validation (development) and test sets?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#what-is-the-right-split-for-traindevtest-sets"><i class="fa fa-check"></i>What is the right split for train/dev/test sets?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#define-loss-cost-and-objective-functions"><i class="fa fa-check"></i>Define loss, cost and objective functions</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#how-batch-minibatch-and-stochastic-gradient-descent-differ"><i class="fa fa-check"></i>How batch, minibatch and stochastic gradient descent differ?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#place-bayeshuman-error-training-error-and-dev-error-on-this-graph.-define-avoidable-bias-and-variance-on-the-same-graph."><i class="fa fa-check"></i>Place bayes/human error, training error and dev error on this graph. Define avoidable bias and variance on the same graph.</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#will-you-focus-on-reducing-bias-or-variance-in-a-neural-network-in-the-following-cases-and-how"><i class="fa fa-check"></i>Will you focus on reducing bias or variance in a neural network in the following cases and how?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#what-is-vectorization-of-an-algorithm-and-what-are-its-benefits"><i class="fa fa-check"></i>What is vectorization of an algorithm and what are its benefits</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#what-are-the-differences-of-image-classification-object-detection-semantic-segmentation-and-instance-segmentation"><i class="fa fa-check"></i>What are the differences of image classification, object detection, semantic segmentation and instance segmentation?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#what-is-the-difference-among-normalizing-scaling-and-standardizing-when-performing-feature-engineering"><i class="fa fa-check"></i>What is the difference among normalizing, scaling and standardizing when performing feature engineering?</a></li>
+<li class="chapter" data-level="" data-path="machine-learning.html"><a href="machine-learning.html#transform-the-following-dataset-employing-one-hot-encoding"><i class="fa fa-check"></i>Transform the following dataset employing one-hot encoding</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="big-data.html"><a href="big-data.html"><i class="fa fa-check"></i><b>2</b> Big Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="big-data.html"><a href="big-data.html#kafka"><i class="fa fa-check"></i><b>2.1</b> Kafka</a><ul>
+<li class="chapter" data-level="" data-path="big-data.html"><a href="big-data.html#what-ordering-guarantee-does-kafka-provide-and-how-can-it-be-used"><i class="fa fa-check"></i>What ordering guarantee does Kafka provide and how can it be used?</a></li>
+<li class="chapter" data-level="" data-path="big-data.html"><a href="big-data.html#what-is-a-consumer-group"><i class="fa fa-check"></i>What is a consumer group?</a></li>
+<li class="chapter" data-level="" data-path="big-data.html"><a href="big-data.html#what-is-the-maximum-number-of-consumers-that-can-consume-in-parallel-from-a-given-topic"><i class="fa fa-check"></i>What is the maximum number of consumers that can consume in parallel from a given topic?</a></li>
+<li class="chapter" data-level="" data-path="big-data.html"><a href="big-data.html#explain-event-ingestion-and-processing-time-and-place-them-in-chronological-order"><i class="fa fa-check"></i>Explain event, ingestion and processing time and place them in chronological order</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="computer-science.html"><a href="computer-science.html"><i class="fa fa-check"></i><b>3</b> Computer Science</a><ul>
+<li class="chapter" data-level="3.1" data-path="computer-science.html"><a href="computer-science.html#data-structures"><i class="fa fa-check"></i><b>3.1</b> Data Structures</a></li>
+<li class="chapter" data-level="3.2" data-path="computer-science.html"><a href="computer-science.html#algorithms"><i class="fa fa-check"></i><b>3.2</b> Algorithms</a></li>
+<li class="chapter" data-level="3.3" data-path="computer-science.html"><a href="computer-science.html#functional-programming"><i class="fa fa-check"></i><b>3.3</b> Functional Programming</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="programming-languages.html"><a href="programming-languages.html"><i class="fa fa-check"></i><b>4</b> Programming Languages</a><ul>
+<li class="chapter" data-level="4.1" data-path="programming-languages.html"><a href="programming-languages.html#scala"><i class="fa fa-check"></i><b>4.1</b> Scala</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="programming-languages.html"><a href="programming-languages.html#what-implementations-are-possible-for-the-following-generic-function"><i class="fa fa-check"></i><b>4.1.1</b> What implementations are possible for the following generic function?</a></li>
+<li class="chapter" data-level="4.1.2" data-path="programming-languages.html"><a href="programming-languages.html#a-monad-is-automatically-a-functor.-given-the-implementation-for-monad-implement-the-functor-interface."><i class="fa fa-check"></i><b>4.1.2</b> A Monad is automatically a Functor. Given the implementation for monad, implement the functor interface.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="programming-languages.html"><a href="programming-languages.html#python"><i class="fa fa-check"></i><b>4.2</b> Python</a></li>
+<li class="chapter" data-level="4.3" data-path="programming-languages.html"><a href="programming-languages.html#sql"><i class="fa fa-check"></i><b>4.3</b> SQL</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="mathematics.html"><a href="mathematics.html"><i class="fa fa-check"></i><b>5</b> Mathematics</a><ul>
+<li class="chapter" data-level="5.1" data-path="mathematics.html"><a href="mathematics.html#linear-algebra"><i class="fa fa-check"></i><b>5.1</b> Linear Algebra</a></li>
+<li class="chapter" data-level="5.2" data-path="mathematics.html"><a href="mathematics.html#probability-theory-and-statistics"><i class="fa fa-check"></i><b>5.2</b> Probability Theory and Statistics</a><ul>
+<li class="chapter" data-level="" data-path="mathematics.html"><a href="mathematics.html#state-bayes-law"><i class="fa fa-check"></i>State Bayes law</a></li>
+<li class="chapter" data-level="" data-path="mathematics.html"><a href="mathematics.html#explain-what-a-p-value-is-in-the-context-of-an-ab-test"><i class="fa fa-check"></i>Explain what a p-value is in the context of an A/B test</a></li>
+<li class="chapter" data-level="" data-path="mathematics.html"><a href="mathematics.html#explain-what-type-i-and-type-ii-errors-are-in-the-context-of-an-ab-test"><i class="fa fa-check"></i>Explain what Type I and Type II errors are in the context of an A/B test</a></li>
+<li class="chapter" data-level="" data-path="mathematics.html"><a href="mathematics.html#during-a-survey-with-a-yesno-answer-and-in-order-to-provide-anonymity-the-participants-are-asked-to-answer-honestly-or-not-based-on-the-outcome-of-a-coin-flip.-if-the-outcome-is-heads-they-should-give-their-true-answer-if-it-is-tails-they-should-give-a-positiveyes-answer.-would-that-work-what-are-the-assumptions-if-the-result-of-the-survey-is-that-80-of-the-participants-answered-positively-what-is-the-true-percentage-of-positive-answers"><i class="fa fa-check"></i>During a survey with a yes/no answer, and in order to provide anonymity, the participants are asked to answer honestly or not based on the outcome of a coin flip. If the outcome is heads, they should give their true answer, if it is tails they should give a positive/yes answer. Would that work? What are the assumptions? If the result of the survey is that 80% of the participants answered positively, what is the true percentage of positive answers?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="mathematics.html"><a href="mathematics.html#multivariate-calculus"><i class="fa fa-check"></i><b>5.3</b> Multivariate Calculus</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning Engineer Interview</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mathematics" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Mathematics</h1>
+<div id="linear-algebra" class="section level2">
+<h2><span class="header-section-number">5.1</span> Linear Algebra</h2>
+</div>
+<div id="probability-theory-and-statistics" class="section level2">
+<h2><span class="header-section-number">5.2</span> Probability Theory and Statistics</h2>
+<div id="state-bayes-law" class="section level3 unnumbered">
+<h3>State Bayes law</h3>
+<p>Bayes law/theorem/rule states that</p>
+<p><span class="math display">\[
+  P(A|B) = \frac{P(B|A) \: P(A)}{P(B)},
+\]</span>
+where <span class="math inline">\(P(X|Y)\)</span> is the conditional probability of event X occuring given that Y is true. P(A) and P(B) are called marginal probabilities.</p>
+<p>The law can be easily memorised and derived from the symmetric equation</p>
+<p><span class="math display">\[
+  P(A | B) \: P(B) = P(B | A)\: P(A).
+\]</span></p>
+</div>
+<div id="explain-what-a-p-value-is-in-the-context-of-an-ab-test" class="section level3 unnumbered">
+<h3>Explain what a p-value is in the context of an A/B test</h3>
+<p>When performing an A/B test, our null hypothesis is that group B (the variant) is the same as group A (the control) based on some metric. The result of the experiment measures the difference in the value of the metric between the two groups.</p>
+<p>p-value is the probability of observing such a difference or higher if the null hypothesis is true. In other words, if we did an A/A test instead of an A/B test, the probability of observing at least such an extreme result is this p-value.</p>
+</div>
+<div id="explain-what-type-i-and-type-ii-errors-are-in-the-context-of-an-ab-test" class="section level3 unnumbered">
+<h3>Explain what Type I and Type II errors are in the context of an A/B test</h3>
+<p>Type I error is an error where we reject the null hypothesis when it is actually true. In an A/B test, this is an error where we conclude that we observed an effect in group B (variant) compared to group A (control), when the effect didn’t really exist.</p>
+<p>Type II error is an error where we fail to reject the null hypothesis when it is actually false. In an A/B test, this is an error where we fail to observe an effect in group B (variant) compared to group A (control), when the effect did exist.</p>
+</div>
+<div id="during-a-survey-with-a-yesno-answer-and-in-order-to-provide-anonymity-the-participants-are-asked-to-answer-honestly-or-not-based-on-the-outcome-of-a-coin-flip.-if-the-outcome-is-heads-they-should-give-their-true-answer-if-it-is-tails-they-should-give-a-positiveyes-answer.-would-that-work-what-are-the-assumptions-if-the-result-of-the-survey-is-that-80-of-the-participants-answered-positively-what-is-the-true-percentage-of-positive-answers" class="section level3 unnumbered">
+<h3>During a survey with a yes/no answer, and in order to provide anonymity, the participants are asked to answer honestly or not based on the outcome of a coin flip. If the outcome is heads, they should give their true answer, if it is tails they should give a positive/yes answer. Would that work? What are the assumptions? If the result of the survey is that 80% of the participants answered positively, what is the true percentage of positive answers?</h3>
+<p>Yes this would work because, assuming the coins used are fair (50% chance of heads or tails) and the number of participants is large we easily calculate the true percentage of positive answers.</p>
+<p>The flip of the coin affects only the answers of the candidates whose true answer is no/negative.</p>
+<p>If <span class="math inline">\(AY\)</span> and <span class="math inline">\(AN\)</span> are the percentages of people that answered yes and no respectively, while <span class="math inline">\(AY\)</span> and <span class="math inline">\(AN\)</span> are the true percentages of yes/no response (the response the candidates would have given if they didn’t have to modify their answer), then</p>
+<p><span class="math display">\[
+  AN = p(heads) \: TN = 0.5 \: TN,
+\]</span>
+which means that the true percentage of negative answers is</p>
+<p><span class="math display">\[
+  TN = 2 \:AN = 2 \cdot 0.2 = 0.4 = 40\%,
+\]</span>
+and therefore the true percentage of positive answers is</p>
+<p><span class="math display">\[
+  TY = 1 - TN = 1 - 0.4 = 0.6 = 60\%
+\]</span></p>
+</div>
+</div>
+<div id="multivariate-calculus" class="section level2">
+<h2><span class="header-section-number">5.3</span> Multivariate Calculus</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="programming-languages.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/codiply/machine-learning-engineer-interview/edit/master/book/05-mathematics.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
