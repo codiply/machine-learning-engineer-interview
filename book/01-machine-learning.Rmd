@@ -206,3 +206,22 @@ given an algorithm that takes into account the values of the feature across all 
 Examples of scaling include MinMax scaling (scale to a given range), Mean/variance standardization (see below) and
 Robust scaling (scaling using statistics that are robust to outliers).
 - Standardization is a type of scaling where we remove the mean of the feature and scale it so that its variance becomes one.
+
+### Transform the following dataset employing one-hot encoding {-}
+
+| sample_id | phase  | weight |
+|:---------:|:------:|:------:|
+|     1     | gas    |   10   |
+|     2     | liquid |   20   |
+|     3     | gas    |   30   |
+|     4     | solid  |   10   |
+
+We can only use one-hot encoding on the categorical (discrete) feature *phase*. We create a binary column for each of
+its possible values (gas, liquid and solid). The transformed dataset is shown below.
+
+| sample_id | phase_gas | phase_liquid | phase_solid | weight |
+|:---------:|:---------:|:------------:|:-----------:|:------:|
+|     1     |     1     |       0      |      0      |   10   |
+|     2     |     0     |       1      |      0      |   20   |
+|     3     |     1     |       0      |      0      |   30   |
+|     4     |     0     |       0      |      1      |   10   |
